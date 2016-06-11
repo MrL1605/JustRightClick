@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "JustRightClick",
+  "short_name": "JustRightClick",
+  "description": "Adds menus to right click for easier searches.",
+  "version": "0.0.3",
+  "minimum_chrome_version": "38",
+
+  "icons": {
+    "16": "assets/rc_icon_16x16.png",
+    "48": "assets/rc_icon_48x48.png",
+    "128": "assets/rc_icon_128x128.png"
+  },
+  
+  "background": {
+      "scripts": ["background.js"]
+  },
+  
+  "permissions": [
+          "contextMenus",
+          "tabs",
+          "http://*/*",
+          "https://*/*"
+  ]
+}
