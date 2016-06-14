@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JustRightClick</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">		
+	<meta name="description" content="Chrome Extension to ease search in various engines.">
+	<meta name="author" content="9code">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" 
+              data-toggle="collapse" data-target="#navbar" 
+              aria-expanded="false" aria-controls="navbar">
+              
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Just Right Click</a>
+          </div>
+          <div id="navbar" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav" style="font-size:18px">
+              </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="feature">
+            <h1>List of existing rules</h1>
+            <table class="table table-stripped" id="all_rules">
+              <tr><th>Name</th><th>URL to go to</th><th>Use selected text</th><th>Delete</th></tr>
+            </table>
+            <button type="button" class="btn btn-danger" onclick="deleteRules()" style="margin-left:0;">Delete Selected</button>
+
+            <div class="form-group">
+              <label for="url"><h3>Add another option to JustRightClick(Working on this) :</h3><span><u></u></span></label>
+              <h4>
+                <input type="text" class="form-control" id="rule_url" name="rule_name" placeholder="Name to display">
+              </h4>
+              <h4>
+                <input type="text" class="form-control" id="url" name="url" placeholder="Enter Prefix URL">
+              </h4>
+              <div class="checkbox">
+                <label><input type="checkbox" id="chk-selected" name="chk-selected" value="">Use selected text</label>
+              </div>
+
+            </div>
+            <button type="button" class="btn btn-primary" onclick="saveSettings()" style="margin-left:0;">Save Settings</button>
+        </div>
+     </div>
+
+  <script src="../js/options.js"></script>
+
+</body>
+</html>
+

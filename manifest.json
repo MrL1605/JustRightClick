@@ -13,11 +13,21 @@
   },
   
   "background": {
-      "scripts": ["background.js"]
+      "scripts": ["js/background.js"]
   },
+
+  
+  "options_ui": {
+      "page": "html/options.html",
+      "chrome_style": false,
+      "open_in_tab": true
+    },
+
+
   
   "permissions": [
           "contextMenus",
+          "storage",
           "tabs",
           "http://*/*",
           "https://*/*"

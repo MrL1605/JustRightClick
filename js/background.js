@@ -1,7 +1,6 @@
 
 
 
-
 /**
  * Create Parent search item
  */
@@ -125,5 +124,68 @@ chrome.contextMenus.create(child_properties, function(){
     console.log("Got expected error: " + chrome.extension.lastError.message);
   }
 });
+
+
+/**
+ * Create Vocabulary Dictionary Search item
+ */
+function VocabClick(info, tab){
+  var search_string = info.selectionText;
+  // link
+  chrome.tabs.create({url: "https://www.facebook.com/search/top/?opensearch=1&q=" + search_string});
+}
+var child_properties = {
+  id: "vocab_child",
+  title: "Vocabulary",
+  contexts: ["selection"],
+  parentId: "look_up_in_parent",
+  onclick: VocabClick
+};
+chrome.contextMenus.create(child_properties, function(){
+  // Just a callback after creation.
+  // Check for errors.
+  if (chrome.extension.lastError) {
+    console.log("Got expected error: " + chrome.extension.lastError.message);
+  }
+});
+
+
+
+
+var storage = {"whole_storage" : [
+  { 
+    "name":"Google",
+    "URL" : "https://www.google.com/search?q=",
+    "select" : true,
+    "delete" : false
+  },
+  {
+    "name":"Google Images",
+    "URL" : "https://www.google.com/search?tbm=isch&q=",
+    "select" : true,
+    "delete" : false
+  },
+  {
+    "name":"Google",
+    "URL" : "https://www.vocabulary.com/dictionary/",
+    "select" : true,
+    "delete" : false
+  },
+  {
+    "name":"Facebook",
+    "URL" : "https://www.facebook.com/search/top/?opensearch=1&q=",
+    "select" : true,
+    "delete" : true
+  }
+]};
+
+
+chrome.storage.sync.set(storage, function() {
+    // Notify that we saved.
+    console.log('Settings saved');
+});
+
+
+
 
 

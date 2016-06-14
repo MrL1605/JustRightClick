@@ -1,0 +1,142 @@
+
+/* CSS file placeholder. */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  font-family: 'Crimson Text', serif;
+}
+.footer
+{
+  text-align: center;
+}
+/* Feature */
+
+.feature h2
+{
+  font-size: 46px;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+body > .container {
+  padding: 60px 15px 0;
+}
+/**color: #474740;
+*/
+
+.container {
+  max-width: 960px;
+}
+
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar {
+  font-family: sans-serif;
+}
+
+/*
+.navbar-default {
+  background-color: rgba(33, 110, 226, 0.98);
+  border: none;
+  box-shadow: 0 3px 4px rgba(0,0,0,0.2);
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-brand:hover {
+  color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #ffa;
+}
+
+.navbar-default .navbar-nav > li:hover {
+  background: rgba(33, 110, 226,0.2);
+}
+
+.navbar-toggle {
+  background: #eee;
+}
+*/
+.body li {
+  font-size: 1.4em;
+}
+
+.body li li{
+  font-size: 1em;
+}
+
+h3.panel-title {
+  font-size: 22px;
+}
+
+p {
+  font-size: 20px;
+}
+
+header {
+  margin-bottom: 2em;
+}
+
+/* for buttons */
+.mobile a,.mobile a:hover{
+  padding: 10px 20px;
+  margin-top: 6%;
+  font-size: 24px;
+}
+@media only screen and (max-width:800px){
+.mobile .row
+{
+    text-align: center;
+}
+}
+
+/* feature */
+.feature
+{
+    margin-bottom: 200px;
+}
+.feature h1{
+  font-size: 63px;
+  margin-top: 5%;
+  margin-bottom: 7%;
+  font-family: 'Crimson Text',serif;
+}
+
+@media screen and (max-width:700px){
+    .feature{        
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+}
+
+/* footer */
+.footer .container
+{
+    margin: 20px;
+    padding:0 30px;
+}
+.footer{
+    position: absolute;
+    width: 100%;
+    margin-bottom:0;
+}
+
+
+
